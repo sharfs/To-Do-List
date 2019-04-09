@@ -38,10 +38,14 @@ if(isset($_POST['todoEntry'])){
         
     }
 }
+
+//If list is set, display items
+if(isset($_SESSION['listItems'])){
 echo "<ul>";
-       foreach ($_SESSION['listItems'] as $items)
-       echo "<li>" .$items. "</li>";
-        "</ul>"
+       foreach ($_SESSION['listItems'] as $items){
+       echo "<li>" .$items. "</li>";}
+     echo "</ul>";
+}
 ?>
 <script>
 $(document).ready(function(){
